@@ -1,0 +1,15 @@
+language: node_js
+cache:
+  directories:
+    - node_module
+notifications:
+  email: false
+node_js:
+  - '6'
+before_install:
+  - npm install yarn
+  - yarn
+script:
+  - yarn run svgo
+after_success:
+  - npm run semantic-release
