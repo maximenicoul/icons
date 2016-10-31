@@ -13,3 +13,6 @@ script:
   - yarn run svgo
 after_success:
   - npm run semantic-release
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/
